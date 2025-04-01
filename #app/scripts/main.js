@@ -41,4 +41,37 @@ function domLoad() {
             }
         });
     });
+
+    // ---
+
+    var swiper = new Swiper(".js-team-swipre", {
+        direction: "vertical",
+        pagination: false,
+        slidesPerView: 3,
+        spaceBetween: 1,
+    });
+
+    const itemsBtnsTeam = document.querySelectorAll('.js-item-card-btn');
+    const cardsTeam = document.querySelectorAll(".js-team-card");
+
+    itemsBtnsTeam.forEach((itemBtnTeam) => {
+        itemBtnTeam.addEventListener('click', function () {
+            itemsBtnsTeam.forEach((it) => it.classList.remove('active'));
+
+            itemBtnTeam.classList.add('active')
+
+            const target = itemBtnTeam.getAttribute("data-item");
+
+            cardsTeam.forEach(card => {
+                card.classList.remove("active");
+            });
+
+            const activeCard = document.querySelector(`.js-team-card[data-item="${target}"]`);
+
+            if (activeCard) {
+                activeCard.classList.add("active");
+            }
+        });
+
+    });
 }
