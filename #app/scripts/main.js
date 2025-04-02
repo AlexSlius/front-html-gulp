@@ -74,4 +74,37 @@ function domLoad() {
         });
 
     });
+
+    // -- 
+
+    document.querySelectorAll('.js-swiper-cop').forEach((itemSlider) => {
+        const swiperInnow = new Swiper(itemSlider.querySelector('.js-swipre-innov'), {
+            loop: true,
+            pagination: {
+                el: itemSlider.querySelector(".js-custom-pagination-innov"),
+                clickable: true,
+            },
+            navigation: {
+                nextEl: itemSlider.querySelector(".js-custom-next-innov"),
+                prevEl: itemSlider.querySelector(".js-custom-prev-innov"),
+            },
+            on: {
+                activeIndexChange: function () {
+                    setTimeout(() => {
+                        const activeSlideIndex = swiperInnow.realIndex || 0;
+
+                        itemSlider.querySelectorAll('.js-img-innow').forEach((im) => {
+                            im.classList.remove('active');
+                        });
+
+                        const activeImg = itemSlider.querySelector(`.js-img-innow[data-index="${activeSlideIndex}"]`);
+
+                        if (activeImg) {
+                            activeImg.classList.add("active");
+                        }
+                    }, 50);
+                },
+            },
+        });
+    })
 }
