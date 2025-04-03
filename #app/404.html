@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/icon/favicone.ico">
+    <title>About</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include('./components/_header.html')
+        <main class="main">
+            <div class="error-page">
+                <div class="container">
+                    <div class="title-error FreightDispProBook">Oops! <br /> Page Not Found :(</div>
+                    <div class="lin-left"><span></span></div>
+                    <div class="error-page__row">
+                        <div class="error-t-s FreightDispProBook">It looks like the page you're looking for doesn’t
+                            exist or has
+                            been moved</div>
+                        <div class="error-404 FreightDispProBook">404</div>
+                    </div>
+                    <div class="row_error_btn">
+                        <a href="/" class="bnt-def bnt-def_bigger bnt-def_blue">
+                            <i>
+                                <svg>
+                                    <use xlink:href="icons/sprite.svg#line-btn" />
+                                </svg>
+                            </i>
+                            <span>home page</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @@include('./components/_footer.html')
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

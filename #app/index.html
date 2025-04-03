@@ -378,13 +378,13 @@
                     <div class="s-form-bot">
                         <div class="container">
                             <div class="s-form-wr">
-                                <form>
+                                <form class="js-form-cont">
                                     <div class="form-container">
                                         <div class="ite-in-w js-item-w">
                                             <label>
                                                 <p class="title-input">Your name*</p>
                                                 <div class="in-w">
-                                                    <input type="text" class="int" placeholder="Your name">
+                                                    <input type="text" required name="name" class="int" placeholder="Your name">
                                                 </div>
                                             </label>
                                             <!-- <p class="ite-error">error text</p> -->
@@ -393,7 +393,8 @@
                                             <label>
                                                 <p class="title-input">Your e-mail*</p>
                                                 <div class="in-w">
-                                                    <input type="text" class="int" placeholder="Your e-mail">
+                                                    <input type="text" required name="email" class="int"
+                                                        placeholder="Your e-mail">
                                                 </div>
                                             </label>
                                         </div>
@@ -401,24 +402,16 @@
                                             <label>
                                                 <p class="title-input">Your phone</p>
                                                 <div class="in-w">
-                                                    <input type="text" class="int" placeholder="Your phone">
+                                                    <input type="text" name="phone" class="int"
+                                                        placeholder="Your phone">
                                                 </div>
                                             </label>
                                         </div>
                                         <div class="ite-in-w js-item-w">
                                             <label>
-                                                <p class="title-input">Service</p>
+                                                <p class="title-input">Message</p>
                                                 <div class="in-w">
-                                                    <input type="text" class="int" placeholder="Service">
-                                                </div>
-                                            </label>
-                                        </div>
-
-                                        <div class="ite-in-w js-item-w">
-                                            <label>
-                                                <p class="title-input">Message*</p>
-                                                <div class="in-w">
-                                                    <textarea name="" class="int textarea"
+                                                    <textarea name="message" class="int textarea"
                                                         placeholder="Message"></textarea>
                                                 </div>
                                             </label>

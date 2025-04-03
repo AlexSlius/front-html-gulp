@@ -31,7 +31,7 @@
                 </nav>
             </div>
             <div>
-                <button class="bnt-def bnt-def_header">
+                <button class="bnt-def bnt-def_header js-btn-open-modal">
                     <i>
                         <svg>
                             <use xlink:href="icons/sprite.svg#line-btn" />
@@ -249,7 +249,7 @@
                     <div class="s-form-bot">
                         <div class="container">
                             <div class="s-form-wr">
-                                <form>
+                               <form class="js-form-cont">
                                     <div class="form-container">
                                         <div class="ite-in-w js-item-w">
                                             <label>
@@ -273,14 +273,6 @@
                                                 <p class="title-input">Your phone</p>
                                                 <div class="in-w">
                                                     <input type="text" class="int" placeholder="Your phone">
-                                                </div>
-                                            </label>
-                                        </div>
-                                        <div class="ite-in-w js-item-w">
-                                            <label>
-                                                <p class="title-input">Service</p>
-                                                <div class="in-w">
-                                                    <input type="text" class="int" placeholder="Service">
                                                 </div>
                                             </label>
                                         </div>
@@ -391,6 +383,133 @@
         <p>Copyright © 2025 Gibson CRE. All Rights Reserved.</p>
     </div>
 </footer>
+
+<div class="modale js-modale">
+    <div class="modale__opas js-modale-opas js-btn-close-modal"></div>
+
+    <div class="modale__cont js-modale-cont">
+        <div class="modale_btn_close js-btn-close-modal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path
+                    d="M23.4662 24.4107L24.4102 23.4667L16.9435 16L24.4102 8.53336L23.4662 7.58936L15.9995 15.056L8.53282 7.58936L7.58882 8.53336L15.0555 16L7.58882 23.4667L8.53282 24.4107L15.9995 16.944L23.4662 24.4107Z" />
+            </svg>
+        </div>
+
+        <div class="modale_row">
+            <div class="modale_left">
+                <div class="modale_logo">
+                    <img src="img/logo-header.svg" alt="Website logo" />
+                </div>
+                <div class="lin-left modale_left_top-line"><span></span></div>
+                <div class="m-contacts">
+                    <p>305.704.9787</p>
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="icons/sprite.svg#i-address" />
+                        </svg>
+                        <span>3250 Mary Street, Suite 520
+                            Coconut Grove, FL 33133</span>
+                    </a>
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="icons/sprite.svg#i-phone" />
+                        </svg>
+                        <span>Phone</span>
+                    </a>
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="icons/sprite.svg#i-email" />
+                        </svg>
+                        <span>E-mail</span>
+                    </a>
+                </div>
+                <div class="m-social">
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="icons/sprite.svg#soc-f" />
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="icons/sprite.svg#soc-inst" />
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg>
+                            <use xlink:href="icons/sprite.svg#soc-in" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="lin-left modale_left_bot-line"><span></span></div>
+
+                <div class="modale_img_w">
+                    <img src="img/img-modal-s.png" alt="">
+                </div>
+            </div>
+            <div class="modale_form">
+                <div class="modale_form_wr">
+                    <div class="modale_title MercuryDisplayRoman"><span>Contact us</span> to experience a new level of
+                        personalized service,
+                        strategic expertise, and market insight!</div>
+                    <form class="js-form-cont">
+                        <div class="form-container">
+                            <div class="ite-in-w js-item-w">
+                                <label>
+                                    <p class="title-input">Your name*</p>
+                                    <div class="in-w">
+                                        <input type="text" class="int" required placeholder="Your name">
+                                    </div>
+                                </label>
+                                <!-- <p class="ite-error">error text</p> -->
+                            </div>
+                            <div class="ite-in-w js-item-w">
+                                <label>
+                                    <p class="title-input">Your e-mail*</p>
+                                    <div class="in-w">
+                                        <input type="text" class="int" required placeholder="Your e-mail">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="ite-in-w js-item-w">
+                                <label>
+                                    <p class="title-input">Your phone</p>
+                                    <div class="in-w">
+                                        <input type="text" class="int" placeholder="Your phone">
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="ite-in-w js-item-w">
+                                <label>
+                                    <p class="title-input">Message</p>
+                                    <div class="in-w">
+                                        <textarea name="" class="int textarea" placeholder="Message"></textarea>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="born-wr-bot">
+                                <button class="bnt-def bnt-def_bigger_big bnt-def_blue">
+                                    <i>
+                                        <svg>
+                                            <use xlink:href="icons/sprite.svg#line-btn" />
+                                        </svg>
+                                    </i>
+                                    <span>send</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- <div class="form-successful">
+                    <div class="form-successful__wr">
+                        <div class="form-successful_title MercuryDisplayRoman">Thank you for your submission!</div>
+                        <div class="form-successful_sub-title MercuryDisplayRoman">We'll reach out to you shortly. <br />
+                            Have a wonderful day!</div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
