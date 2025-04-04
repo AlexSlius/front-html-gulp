@@ -22,7 +22,7 @@
                     <img src="img/logo-header-black.svg" alt="Website logo" />
                 </a>
             </div>
-            <div>
+            <div class="mob-none">
                 <nav class="header_menu">
                     <a href="/about.html">about us <span></span> <span></span></a>
                     <a href="/services.html">Services <span></span> <span></span></a>
@@ -30,7 +30,7 @@
                     <a href="/our-defference.html">our difference <span></span> <span></span></a>
                 </nav>
             </div>
-            <div>
+            <div class="mob-none">
                 <button class="bnt-def bnt-def_header js-btn-open-modal">
                     <i>
                         <svg>
@@ -39,16 +39,97 @@
                     </i>
                     <span>Contact us</span></button>
             </div>
+
+            <div class="burger-menu js-burger">
+                <span></span>
+            </div>
         </div>
     </div>
 </header>
+
+<div class="mob-menu js-mob-menu">
+    <div class="mob-menu_wr">
+        <div class="mob_ul">
+            <ul>
+                <li>
+                    <a href="#">about us</a>
+                </li>
+                <li>
+                    <a href="#">services</a>
+                </li>
+                <li>
+                    <a href="#">portfolio</a>
+                </li>
+                <li>
+                    <a href="#">our difference</a>
+                </li>
+            </ul>
+            
+        </div>
+        <div class="lin-left"><span></span></div>
+        <div class="mob-menu-bot">
+            <div class="mob-social">
+                <a href="#">
+                    <svg>
+                        <use xlink:href="icons/sprite.svg#soc-f" />
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="icons/sprite.svg#soc-inst" />
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="icons/sprite.svg#soc-in" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="mob-contacts">
+                <p>305.704.9787</p>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="icons/sprite.svg#i-address" />
+                    </svg>
+                    <span>3250 Mary Street, Suite 520
+                        Coconut Grove, FL 33133</span>
+                </a>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="icons/sprite.svg#i-phone" />
+                    </svg>
+                    <span>Phone</span>
+                </a>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="icons/sprite.svg#i-email" />
+                    </svg>
+                    <span>E-mail</span>
+                </a>
+            </div>
+
+            <div class="mob-wr-btn">
+                <button class="bnt-def bnt-def_bigger bnt-def_while js-btn-open-modal">
+                    <i>
+                        <svg>
+                            <use xlink:href="icons/sprite.svg#line-btn" />
+                        </svg>
+                    </i>
+                    <span>let’s talk!</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
         <main class="main other_page">
             <div class="sec-top-page">
                 <section class="banner-page" style="background-image: url('img/bg-portfoli.png');">
                     <div class="ban-left">
                         <h1 class="banner-page-title title-2 title_mod FreightDispProBook">Portfolio</h1>
                         <div class="lin-left"><span></span></div>
-                        <div class="banner-page-bot-btn">
+                        <!-- don't show on phone -->
+                        <div class="banner-page-bot-btn mob-none">
                             <a href="#" class="bnt-def bnt-def_bigger bnt-def_while">
                                 <i>
                                     <svg>
@@ -69,11 +150,25 @@
                             industrial, retail, office, multifamily, land and hospitality</p>
                     </div>
                 </section>
-                <div class="gibson-baner-top">
+
+                <!-- don't show on phone -->
+                <div class="gibson-baner-top mob-none">
                     <div class="FreightDispProBook gibson-baner-top_name">
                         <span>GIBSON CRE </span>
                         <div class="lin-left"><span></span></div>
                     </div>
+                </div>
+
+                <!-- don't show on pc -->
+                <div class="banner-page-bot-btn banner-page-bot-btn_mob">
+                    <a href="#" class="bnt-def bnt-def_bigger bnt-def_gold">
+                        <i>
+                            <svg>
+                                <use xlink:href="icons/sprite.svg#line-btn" />
+                            </svg>
+                        </i>
+                        <span>let’s talk!</span>
+                    </a>
                 </div>
             </div>
 
@@ -181,7 +276,7 @@
                     <div class="s-form-bot">
                         <div class="container">
                             <div class="s-form-wr">
-                               <form class="js-form-cont">
+                                <form class="js-form-cont">
                                     <div class="form-container">
                                         <div class="ite-in-w js-item-w">
                                             <label>
@@ -254,7 +349,8 @@
                             <img src="img/logo-header.svg" alt="Website logo" />
                         </a>
                     </div>
-                    <div class="fot-priv">
+                    <!-- don't show on phone -->
+                    <div class="fot-priv mob-none">
                         <a href="#">Privacy Policy</a>
                     </div>
                 </div>
@@ -305,17 +401,21 @@
                         </svg>
                     </a>
                 </div>
+                <!-- don't show on pc -->
+                <div class="bot_mob-private">
+                    <a href="#">Privacy Policy</a>
+                </div>
             </div>
         </div>
-
-        <div class="footer_inscription FreightDispProBook">GIBSON </div>
+        <!-- don't show on phone -->
+        <div class="footer_inscription mob-none FreightDispProBook">GIBSON </div>
     </div>
     <div class="footer_bot">
         <p>Copyright © 2025 Gibson CRE. All Rights Reserved.</p>
     </div>
 </footer>
 
-<div class="modale js-modale">
+<!--<div class="modale js-modale">
     <div class="modale__opas js-modale-opas js-btn-close-modal"></div>
 
     <div class="modale__cont js-modale-cont">
@@ -391,7 +491,6 @@
                                         <input type="text" class="int" required placeholder="Your name">
                                     </div>
                                 </label>
-                                <!-- <p class="ite-error">error text</p> -->
                             </div>
                             <div class="ite-in-w js-item-w">
                                 <label>
@@ -436,11 +535,11 @@
                         <div class="form-successful_sub-title MercuryDisplayRoman">We'll reach out to you shortly. <br />
                             Have a wonderful day!</div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
-</div>
+</div> -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

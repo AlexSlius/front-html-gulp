@@ -150,47 +150,49 @@ function domLoad() {
 
     // -----------
 
-    const form = document.querySelector(".js-form-cont");
+    const forms = document.querySelectorAll(".js-form-cont");
 
-    form.addEventListener("submit", function (event) {
-        event.preventDefault();
+    forms.forEach((itemFor) => {
+        itemFor.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-        const formData = {};
-        let isValid = true;
+            const formData = {};
+            let isValid = true;
 
-        document.querySelectorAll(".ite-error").forEach(el => el.remove());
+            document.querySelectorAll(".ite-error").forEach(el => el.remove());
 
-        const inputs = form.querySelectorAll("input, textarea");
+            const inputs = itemFor.querySelectorAll("input, textarea");
 
-        inputs.forEach(input => {
-            const { name, value } = input;
-            formData[name] = value.trim();
-            const parent = input.closest(".ite-in-w");
+            inputs.forEach(input => {
+                const { name, value } = input;
+                formData[name] = value.trim();
+                const parent = input.closest(".ite-in-w");
 
-            if (input.hasAttribute("required") && value.trim() === "") {
-                showError(parent, "This field is required");
-                isValid = false;
-            }
-
-            if (name === "email" && value.trim() !== "") {
-                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-                    showError(parent, "Enter a valid email");
+                if (input.hasAttribute("required") && value.trim() === "") {
+                    showError(parent, "This field is required");
                     isValid = false;
                 }
-            }
 
-            if (name === "phone" && value.trim() !== "") {
-                if (!/^[\d\s+\-()]+$/.test(value)) {
-                    showError(parent, "Enter a valid phone number");
-                    isValid = false;
+                if (name === "email" && value.trim() !== "") {
+                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+                        showError(parent, "Enter a valid email");
+                        isValid = false;
+                    }
                 }
+
+                if (name === "phone" && value.trim() !== "") {
+                    if (!/^[\d\s+\-()]+$/.test(value)) {
+                        showError(parent, "Enter a valid phone number");
+                        isValid = false;
+                    }
+                }
+            });
+
+            if (isValid) {
+                console.log("Form Data:", formData);
+                itemFor.reset();
             }
         });
-
-        if (isValid) {
-            console.log("Form Data:", formData);
-            form.reset(); 
-        }
     });
 
     function showError(parent, message) {
@@ -199,4 +201,25 @@ function domLoad() {
         errorElement.textContent = message;
         parent.appendChild(errorElement);
     }
+
+    // ---
+    const menuMob = document.querySelector('.js-mob-menu');
+
+    document.querySelector('.js-burger').addEventListener('click', function () {
+        if (!this.classList.contains('active')) {
+            this.classList.add('active');
+            menuMob.classList.add('active');
+        } else {
+            this.classList.remove('active');
+            menuMob.classList.remove('active');
+        }
+    });
+
+    // ---
+    new Swiper(".js-mob-swip-abo", {
+        loop: true,
+        slidesPerView: 'auto',
+        spaceBetween: 8,
+        centeredSlides: true,
+    });
 }

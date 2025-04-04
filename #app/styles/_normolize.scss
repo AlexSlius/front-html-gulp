@@ -71,7 +71,8 @@ button {
     background: transparent;
 }
 
-input, textarea {
+input,
+textarea {
     font-family: 'BentonSans-Book', sans-serif;
     border: none;
     outline: none;
@@ -99,4 +100,10 @@ textarea {
 
 .MercuryDisplayRoman {
     font-family: 'MercuryDisplay-Roman', sans-serif;
+}
+
+@media(max-width: 767px) {
+    html {
+        font-size: 16px;
+    }
 }

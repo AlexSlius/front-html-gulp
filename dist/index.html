@@ -22,7 +22,7 @@
                     <img src="img/logo-header-black.svg" alt="Website logo" />
                 </a>
             </div>
-            <div>
+            <div class="mob-none">
                 <nav class="header_menu">
                     <a href="/about.html">about us <span></span> <span></span></a>
                     <a href="/services.html">Services <span></span> <span></span></a>
@@ -30,7 +30,7 @@
                     <a href="/our-defference.html">our difference <span></span> <span></span></a>
                 </nav>
             </div>
-            <div>
+            <div class="mob-none">
                 <button class="bnt-def bnt-def_header js-btn-open-modal">
                     <i>
                         <svg>
@@ -39,9 +39,89 @@
                     </i>
                     <span>Contact us</span></button>
             </div>
+
+            <div class="burger-menu js-burger">
+                <span></span>
+            </div>
         </div>
     </div>
 </header>
+
+<div class="mob-menu js-mob-menu">
+    <div class="mob-menu_wr">
+        <div class="mob_ul">
+            <ul>
+                <li>
+                    <a href="#">about us</a>
+                </li>
+                <li>
+                    <a href="#">services</a>
+                </li>
+                <li>
+                    <a href="#">portfolio</a>
+                </li>
+                <li>
+                    <a href="#">our difference</a>
+                </li>
+            </ul>
+            
+        </div>
+        <div class="lin-left"><span></span></div>
+        <div class="mob-menu-bot">
+            <div class="mob-social">
+                <a href="#">
+                    <svg>
+                        <use xlink:href="icons/sprite.svg#soc-f" />
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="icons/sprite.svg#soc-inst" />
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="icons/sprite.svg#soc-in" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="mob-contacts">
+                <p>305.704.9787</p>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="icons/sprite.svg#i-address" />
+                    </svg>
+                    <span>3250 Mary Street, Suite 520
+                        Coconut Grove, FL 33133</span>
+                </a>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="icons/sprite.svg#i-phone" />
+                    </svg>
+                    <span>Phone</span>
+                </a>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="icons/sprite.svg#i-email" />
+                    </svg>
+                    <span>E-mail</span>
+                </a>
+            </div>
+
+            <div class="mob-wr-btn">
+                <button class="bnt-def bnt-def_bigger bnt-def_while js-btn-open-modal">
+                    <i>
+                        <svg>
+                            <use xlink:href="icons/sprite.svg#line-btn" />
+                        </svg>
+                    </i>
+                    <span>let’s talk!</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
         <main class="main">
             <section class="main-baner" style="background-image: url('img/main-baner.jpg');">
                 <video autoplay="" muted="" loop="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
@@ -69,14 +149,14 @@
                     </div>
 
                     <div class="main-baner_bot_right">
-                        <a href="#" class="bnt-def bnt-def_bigger bnt-def_while">
+                        <button class="bnt-def bnt-def_bigger bnt-def_while js-btn-open-modal">
                             <i>
                                 <svg>
                                     <use xlink:href="icons/sprite.svg#line-btn" />
                                 </svg>
                             </i>
                             <span>let’s talk!</span>
-                        </a>
+                        </button>
                     </div>
 
                     <i class="m-lin-bot"></i>
@@ -127,7 +207,9 @@
                                         to provide guidance every step of the way. </p>
                                 </div>
                             </div>
-                            <div class="s-abo-right">
+
+                            <!-- don't display on phone -->
+                            <div class="s-abo-right mob-none">
                                 <div class="abo-table">
                                     <div class="abo-item">
                                         <div class="abo-item_top FreightDispProBook">10 <span>+</span></div>
@@ -166,11 +248,64 @@
                             <div class="s-abo-img">
                                 <img src="img/ph.jpg" alt="Picture about us">
                             </div>
+
+                            <!-- show om phone -->
+                            <div class="s-abo-mob">
+                                <div class="slid-about-mob">
+                                    <div class="swiper  js-mob-swip-abo">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide item-swip">
+                                                <div class="s-item-ab-mob">
+                                                    <div class="s-item-ab-mob_title FreightDispProBook">10<span>+</span></div>
+                                                    <p class="s-item-ab-mob_p">Years of experience
+                                                        in real estate market</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="swiper-slide item-swip">
+                                                <div class="s-item-ab-mob">
+                                                    <div class="s-item-ab-mob_title FreightDispProBook">10<span>+</span></div>
+                                                    <p class="s-item-ab-mob_p">Years of experience
+                                                        in real estate market</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="swiper-slide item-swip">
+                                                <div class="s-item-ab-mob">
+                                                    <div class="s-item-ab-mob_title FreightDispProBook">10<span>+</span></div>
+                                                    <p class="s-item-ab-mob_p">Years of experience
+                                                        in real estate market</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="swiper-slide item-swip">
+                                                <div class="s-item-ab-mob">
+                                                    <div class="s-item-ab-mob_title FreightDispProBook">10<span>+</span></div>
+                                                    <p class="s-item-ab-mob_p">Years of experience
+                                                        in real estate market</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="s-about-mob_btn">
+                                    <button class="bnt-def bnt-def_bigger bnt-def_blue js-btn-open-modal">
+                                        <i>
+                                            <svg>
+                                                <use xlink:href="icons/sprite.svg#line-btn" />
+                                            </svg>
+                                        </i>
+                                        <span>let’s talk!</span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <div class="s-about-fixed">
+                <!-- don't show on phone -->
+                <div class="s-about-fixed mob-none">
                     <div class="sf-line sf-line_top"></div>
                     <div class="sf-text FreightDispProBook">GIBSON</div>
                     <div class="sf-line sf-line_bot"></div>
@@ -196,9 +331,10 @@
                 </div>
 
                 <div class="s-start_bot">
-                    <div class="sing-gib FreightDispProBook"><span>gibson</span></div>
+                    <!-- don't show on phone -->
+                    <div class="sing-gib mob-none FreightDispProBook"><span>gibson</span></div>
                     <div class="container">
-                        <a href="#" class="bnt-def bnt-def_bigget_height  bnt-def_gold">
+                        <a class="bnt-def bnt-def_bigget_height js-btn-open-modal  bnt-def_gold">
                             <i>
                                 <svg>
                                     <use xlink:href="icons/sprite.svg#line-btn" />
@@ -334,9 +470,11 @@
                                         confidentiality. ONE Commercial will navigate you through the process and act on
                                         your behalf to secure a favorable outcome in any transaction.</p>
 
-                                    <div class="lin-left"><span></span></div>
+                                    <!-- don't show on phone -->
+                                    <div class="lin-left mob-none"><span></span></div>
                                 </div>
-                                <div class="servic-left__btn">
+                                <!-- don't show on phone -->
+                                <div class="servic-left__btn mob-none">
                                     <a href="#" class="bnt-def bnt-def_bigget_height  bnt-def_gold">
                                         <i>
                                             <svg>
@@ -375,6 +513,17 @@
                                     </li>
                                 </ul>
                             </div>
+
+                            <div class="servic-left__btn">
+                                <a href="#" class="bnt-def bnt-def_bigget_height  bnt-def_gold">
+                                    <i>
+                                        <svg>
+                                            <use xlink:href="icons/sprite.svg#line-btn" />
+                                        </svg>
+                                    </i>
+                                    <span>explore services</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -387,6 +536,7 @@
                     <div class="sf-line sf-line_top"></div>
                     <div class="sf-text FreightDispProBook">GIBSON</div>
                     <div class="sf-line sf-line_bot"></div>
+                    <div class="lin-left"><span></span></div>
                 </div>
             </div>
 
@@ -412,10 +562,10 @@
                                             <label>
                                                 <p class="title-input">Your name*</p>
                                                 <div class="in-w">
-                                                    <input type="text" required name="name" class="int" placeholder="Your name">
+                                                    <input type="text" required name="name" class="int"
+                                                        placeholder="Your name">
                                                 </div>
                                             </label>
-                                            <!-- <p class="ite-error">error text</p> -->
                                         </div>
                                         <div class="ite-in-w js-item-w">
                                             <label>
@@ -459,7 +609,9 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="s-form-bot_f">
+
+                        <!-- don't show on phone -->
+                        <div class="s-form-bot_f mob-none">
                             <div class="f_inscription FreightDispProBook">GIBSON CRE</div>
                             <div class="lin-left"><span></span></div>
                         </div>
@@ -477,7 +629,8 @@
                             <img src="img/logo-header.svg" alt="Website logo" />
                         </a>
                     </div>
-                    <div class="fot-priv">
+                    <!-- don't show on phone -->
+                    <div class="fot-priv mob-none">
                         <a href="#">Privacy Policy</a>
                     </div>
                 </div>
@@ -528,17 +681,21 @@
                         </svg>
                     </a>
                 </div>
+                <!-- don't show on pc -->
+                <div class="bot_mob-private">
+                    <a href="#">Privacy Policy</a>
+                </div>
             </div>
         </div>
-
-        <div class="footer_inscription FreightDispProBook">GIBSON </div>
+        <!-- don't show on phone -->
+        <div class="footer_inscription mob-none FreightDispProBook">GIBSON </div>
     </div>
     <div class="footer_bot">
         <p>Copyright © 2025 Gibson CRE. All Rights Reserved.</p>
     </div>
 </footer>
 
-<div class="modale js-modale">
+<!--<div class="modale js-modale">
     <div class="modale__opas js-modale-opas js-btn-close-modal"></div>
 
     <div class="modale__cont js-modale-cont">
@@ -614,7 +771,6 @@
                                         <input type="text" class="int" required placeholder="Your name">
                                     </div>
                                 </label>
-                                <!-- <p class="ite-error">error text</p> -->
                             </div>
                             <div class="ite-in-w js-item-w">
                                 <label>
@@ -659,11 +815,11 @@
                         <div class="form-successful_sub-title MercuryDisplayRoman">We'll reach out to you shortly. <br />
                             Have a wonderful day!</div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
-</div>
+</div> -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

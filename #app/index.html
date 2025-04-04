@@ -41,14 +41,14 @@
                     </div>
 
                     <div class="main-baner_bot_right">
-                        <a href="#" class="bnt-def bnt-def_bigger bnt-def_while">
+                        <button class="bnt-def bnt-def_bigger bnt-def_while js-btn-open-modal">
                             <i>
                                 <svg>
                                     <use xlink:href="icons/sprite.svg#line-btn" />
                                 </svg>
                             </i>
                             <span>let’s talk!</span>
-                        </a>
+                        </button>
                     </div>
 
                     <i class="m-lin-bot"></i>
@@ -99,7 +99,9 @@
                                         to provide guidance every step of the way. </p>
                                 </div>
                             </div>
-                            <div class="s-abo-right">
+
+                            <!-- don't display on phone -->
+                            <div class="s-abo-right mob-none">
                                 <div class="abo-table">
                                     <div class="abo-item">
                                         <div class="abo-item_top FreightDispProBook">10 <span>+</span></div>
@@ -138,11 +140,64 @@
                             <div class="s-abo-img">
                                 <img src="img/ph.jpg" alt="Picture about us">
                             </div>
+
+                            <!-- show om phone -->
+                            <div class="s-abo-mob">
+                                <div class="slid-about-mob">
+                                    <div class="swiper  js-mob-swip-abo">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide item-swip">
+                                                <div class="s-item-ab-mob">
+                                                    <div class="s-item-ab-mob_title FreightDispProBook">10<span>+</span></div>
+                                                    <p class="s-item-ab-mob_p">Years of experience
+                                                        in real estate market</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="swiper-slide item-swip">
+                                                <div class="s-item-ab-mob">
+                                                    <div class="s-item-ab-mob_title FreightDispProBook">10<span>+</span></div>
+                                                    <p class="s-item-ab-mob_p">Years of experience
+                                                        in real estate market</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="swiper-slide item-swip">
+                                                <div class="s-item-ab-mob">
+                                                    <div class="s-item-ab-mob_title FreightDispProBook">10<span>+</span></div>
+                                                    <p class="s-item-ab-mob_p">Years of experience
+                                                        in real estate market</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="swiper-slide item-swip">
+                                                <div class="s-item-ab-mob">
+                                                    <div class="s-item-ab-mob_title FreightDispProBook">10<span>+</span></div>
+                                                    <p class="s-item-ab-mob_p">Years of experience
+                                                        in real estate market</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="s-about-mob_btn">
+                                    <button class="bnt-def bnt-def_bigger bnt-def_blue js-btn-open-modal">
+                                        <i>
+                                            <svg>
+                                                <use xlink:href="icons/sprite.svg#line-btn" />
+                                            </svg>
+                                        </i>
+                                        <span>let’s talk!</span>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
 
-                <div class="s-about-fixed">
+                <!-- don't show on phone -->
+                <div class="s-about-fixed mob-none">
                     <div class="sf-line sf-line_top"></div>
                     <div class="sf-text FreightDispProBook">GIBSON</div>
                     <div class="sf-line sf-line_bot"></div>
@@ -168,9 +223,10 @@
                 </div>
 
                 <div class="s-start_bot">
-                    <div class="sing-gib FreightDispProBook"><span>gibson</span></div>
+                    <!-- don't show on phone -->
+                    <div class="sing-gib mob-none FreightDispProBook"><span>gibson</span></div>
                     <div class="container">
-                        <a href="#" class="bnt-def bnt-def_bigget_height  bnt-def_gold">
+                        <a class="bnt-def bnt-def_bigget_height js-btn-open-modal  bnt-def_gold">
                             <i>
                                 <svg>
                                     <use xlink:href="icons/sprite.svg#line-btn" />
@@ -306,9 +362,11 @@
                                         confidentiality. ONE Commercial will navigate you through the process and act on
                                         your behalf to secure a favorable outcome in any transaction.</p>
 
-                                    <div class="lin-left"><span></span></div>
+                                    <!-- don't show on phone -->
+                                    <div class="lin-left mob-none"><span></span></div>
                                 </div>
-                                <div class="servic-left__btn">
+                                <!-- don't show on phone -->
+                                <div class="servic-left__btn mob-none">
                                     <a href="#" class="bnt-def bnt-def_bigget_height  bnt-def_gold">
                                         <i>
                                             <svg>
@@ -347,6 +405,17 @@
                                     </li>
                                 </ul>
                             </div>
+
+                            <div class="servic-left__btn">
+                                <a href="#" class="bnt-def bnt-def_bigget_height  bnt-def_gold">
+                                    <i>
+                                        <svg>
+                                            <use xlink:href="icons/sprite.svg#line-btn" />
+                                        </svg>
+                                    </i>
+                                    <span>explore services</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -359,6 +428,7 @@
                     <div class="sf-line sf-line_top"></div>
                     <div class="sf-text FreightDispProBook">GIBSON</div>
                     <div class="sf-line sf-line_bot"></div>
+                    <div class="lin-left"><span></span></div>
                 </div>
             </div>
 
@@ -384,10 +454,10 @@
                                             <label>
                                                 <p class="title-input">Your name*</p>
                                                 <div class="in-w">
-                                                    <input type="text" required name="name" class="int" placeholder="Your name">
+                                                    <input type="text" required name="name" class="int"
+                                                        placeholder="Your name">
                                                 </div>
                                             </label>
-                                            <!-- <p class="ite-error">error text</p> -->
                                         </div>
                                         <div class="ite-in-w js-item-w">
                                             <label>
@@ -431,7 +501,9 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="s-form-bot_f">
+
+                        <!-- don't show on phone -->
+                        <div class="s-form-bot_f mob-none">
                             <div class="f_inscription FreightDispProBook">GIBSON CRE</div>
                             <div class="lin-left"><span></span></div>
                         </div>
