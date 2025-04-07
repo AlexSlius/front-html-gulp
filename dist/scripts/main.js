@@ -44,11 +44,20 @@ function domLoad() {
 
     // ---
 
-    var swiper = new Swiper(".js-team-swipre", {
+    new Swiper(".js-team-swipre", {
         direction: "vertical",
         pagination: false,
         slidesPerView: 3,
         spaceBetween: 1,
+        breakpoints: {
+            0: {
+                slidesPerView: 'auto',
+                spaceBetween: 0,
+            },
+            768: {
+                slidesPerView: 3,
+            },
+        },
     });
 
     const itemsBtnsTeam = document.querySelectorAll('.js-item-card-btn');
@@ -76,6 +85,17 @@ function domLoad() {
     });
 
     // -- 
+    new Swiper(".js-swipre-social-mob", {
+        pagination: {
+            el: document.querySelector(".js-custom-pagination-social-mob"),
+            clickable: true,
+        },
+        navigator: false,
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+    });
+
+    // ---
 
     document.querySelectorAll('.js-swiper-cop').forEach((itemSlider) => {
         const swiperInnow = new Swiper(itemSlider.querySelector('.js-swipre-innov'), {
@@ -121,6 +141,7 @@ function domLoad() {
     }
 
     document.querySelectorAll('.js-btn-open-modal').forEach((el) => {
+        console.log(2)
         el.addEventListener('click', function (eve) {
             eve.preventDefault();
 
@@ -136,7 +157,7 @@ function domLoad() {
 
             setTimeout(() => {
                 document.querySelector('.js-modale').classList.remove('open');
-            }, 300);
+            }, 500);
         }, 0);
     }
 
@@ -222,4 +243,30 @@ function domLoad() {
         spaceBetween: 8,
         centeredSlides: true,
     });
+
+    // ----
+    const servListMob = document.querySelectorAll('.js-item-serv-mob');
+
+    if (servListMob.length > 0) {
+        servListMob.forEach((toggleBtn) => {
+            toggleBtn.querySelector('.js-top-ser-mob').addEventListener('click', () => {
+
+                servListMob.forEach((it) => {
+                    it.classList.remove('open');
+
+                    it.querySelector('.item-serv-mob_bot').style.height = '0px';
+                });
+
+                const textBlock = toggleBtn.querySelector('.item-serv-mob_bot');
+
+                if (toggleBtn.classList.contains("open")) {
+                    textBlock.style.height = '0px';
+                    toggleBtn.classList.remove('open')
+                } else {
+                    textBlock.style.height = textBlock.scrollHeight + 'px';
+                    toggleBtn.classList.add('open')
+                }
+            });
+        });
+    }
 }

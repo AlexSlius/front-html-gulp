@@ -22,14 +22,14 @@
                         <div class="lin-left"><span></span></div>
                         <!-- don't show on phone -->
                         <div class="banner-page-bot-btn mob-none">
-                            <a href="#" class="bnt-def bnt-def_bigger bnt-def_while">
+                            <button class="bnt-def bnt-def_bigger bnt-def_while js-btn-open-modal">
                                 <i>
                                     <svg>
                                         <use xlink:href="icons/sprite.svg#line-btn" />
                                     </svg>
                                 </i>
                                 <span>let’s talk!</span>
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -52,14 +52,14 @@
 
                 <!-- don't show on pc -->
                 <div class="banner-page-bot-btn banner-page-bot-btn_mob">
-                    <a href="#" class="bnt-def bnt-def_bigger bnt-def_gold">
+                    <button class="bnt-def js-btn-open-modal bnt-def_bigger bnt-def_gold">
                         <i>
                             <svg>
                                 <use xlink:href="icons/sprite.svg#line-btn" />
                             </svg>
                         </i>
                         <span>let’s talk!</span>
-                    </a>
+                    </button>
                 </div>
             </div>
 
@@ -203,7 +203,8 @@
             </div>
 
             <div class="teams">
-                <div class="teams_cards">
+                <!-- don't show on phone -->
+                <div class="teams_cards mob-none">
                     <div class="team-card js-team-card active" data-item="1">
                         <div class="team-card__img">
                             <img src="img/tema-wade.png" alt="Wade">
@@ -262,10 +263,26 @@
                 <div class="temms-slider-wr">
                     <div class="swiper swiper-team js-team-swipre">
                         <div class="swiper-wrapper">
+                            <div class="swiper-slide pc-none ">
+                                <div class="item-tem-card js-item-card-btn " data-item="0">
+                                    <div class="item-tem-card_img img_contin">
+                                        <img src="img/tema-wade.png" alt="">
+                                    </div>
+                                    <div class="item-tem-card_bot">
+                                        <div class="lin-left"><span></span></div>
+                                        <div class="item-tem-card_name MercuryDisplayRoma">Wade Warren</div>
+                                        <p class="item-tem-card_profesion">Chief Executive Officer</p>
+                                    </div>
+                                </div>
+                            </div>
+
                             <div class="swiper-slide">
                                 <div class="item-tem-card js-item-card-btn" data-item="1">
-                                    <img src="img/team-1.png" alt="">
+                                    <div class="item-tem-card_img">
+                                        <img src="img/team-1.png" alt="">
+                                    </div>
                                     <div class="item-tem-card_bot">
+                                        <div class="lin-left"><span></span></div>
                                         <div class="item-tem-card_name MercuryDisplayRoma">Wade Warren</div>
                                         <p class="item-tem-card_profesion">Chief Executive Officer</p>
                                     </div>
@@ -274,8 +291,11 @@
 
                             <div class="swiper-slide js-item-card-btn" data-item="2">
                                 <div class="item-tem-card">
-                                    <img src="img/team-2.png" alt="">
+                                    <div class="item-tem-card_img">
+                                        <img src="img/team-2.png" alt="">
+                                    </div>
                                     <div class="item-tem-card_bot">
+                                        <div class="lin-left"><span></span></div>
                                         <div class="item-tem-card_name MercuryDisplayRoma">Wade Warren</div>
                                         <p class="item-tem-card_profesion">Chief Executive Officer</p>
                                     </div>
@@ -284,8 +304,11 @@
 
                             <div class="swiper-slide">
                                 <div class="item-tem-card js-item-card-btn" data-item="3">
-                                    <img src="img/team-3.png" alt="">
+                                    <div class="item-tem-card_img">
+                                        <img src="img/team-3.png" alt="">
+                                    </div>
                                     <div class="item-tem-card_bot">
+                                        <div class="lin-left"><span></span></div>
                                         <div class="item-tem-card_name MercuryDisplayRoma">Wade Warren</div>
                                         <p class="item-tem-card_profesion">Chief Executive Officer</p>
                                     </div>
@@ -308,8 +331,10 @@
                                 is tailored to match the specific investment goals of our clients.
                                 With the strength of the Sotheby's International Realty®network,
                                 we connect you to premier investors buyers, sellers, and tenants.</p>
-                            <p>With Gibson Associates, you have a guide with unrivaled local expertise and extensive
-                                global reach to help you navigate the market and achieve unparalleled financial success.
+                            <p>With Gibson Associates, you have a guide with unrivaled local expertise and
+                                extensive
+                                global reach to help you navigate the market and achieve unparalleled
+                                financial success.
                             </p>
                         </div>
                     </div>
@@ -323,9 +348,11 @@
             <div class="s-form s-form_no_pad">
                 <div class="s-form_top">
                     <div class="container">
-                        <div class="title-2 title_mod title_uper FreightDispProBook">Let’s Get Started!</div>
+                        <div class="title-2 title_mod title_uper FreightDispProBook">Let’s Get Started!
+                        </div>
                         <div class="s-form_desc">
-                            <p>Contact us today to experience a new level of personalized service, strategic expertise,
+                            <p>Contact us today to experience a new level of personalized service, strategic
+                                expertise,
                                 and market insight!</p>
                         </div>
                     </div>

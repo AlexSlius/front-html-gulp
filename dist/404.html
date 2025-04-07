@@ -128,11 +128,18 @@
                     <div class="title-error FreightDispProBook">Oops! <br /> Page Not Found :(</div>
                     <div class="lin-left"><span></span></div>
                     <div class="error-page__row">
-                        <div class="error-t-s FreightDispProBook">It looks like the page you're looking for doesn’t
+                        <!-- don't show mob -->
+                        <div class="error-t-s FreightDispProBook mob-none">It looks like the page you're looking for
+                            doesn’t
                             exist or has
                             been moved</div>
                         <div class="error-404 FreightDispProBook">404</div>
                     </div>
+                    <!-- don't show on pc -->
+                    <div class="error-t-s FreightDispProBook pc-none ">It looks like the page you're looking for
+                        doesn’t
+                        exist or has
+                        been moved</div>
                     <div class="row_error_btn">
                         <a href="/" class="bnt-def bnt-def_bigger bnt-def_blue">
                             <i>
@@ -222,7 +229,7 @@
     </div>
 </footer>
 
-<!--<div class="modale js-modale">
+<div class="modale js-modale">
     <div class="modale__opas js-modale-opas js-btn-close-modal"></div>
 
     <div class="modale__cont js-modale-cont">
@@ -234,7 +241,8 @@
         </div>
 
         <div class="modale_row">
-            <div class="modale_left">
+            <!-- don't show on phone -->
+            <div class="modale_left mob-none">
                 <div class="modale_logo">
                     <img src="img/logo-header.svg" alt="Website logo" />
                 </div>
@@ -286,9 +294,14 @@
             </div>
             <div class="modale_form">
                 <div class="modale_form_wr">
-                    <div class="modale_title MercuryDisplayRoman"><span>Contact us</span> to experience a new level of
+                    <!-- don't show on phone -->
+                    <div class="modale_title MercuryDisplayRoman mob-none"><span>Contact us</span> to experience a new
+                        level of
                         personalized service,
                         strategic expertise, and market insight!</div>
+                    <!-- don't show pc -->
+                    <div class="modale_title FreightDispProBook pc-none">Are you ready for what’s next?
+                        Let’s have a conversation.</div>
                     <form class="js-form-cont">
                         <div class="form-container">
                             <div class="ite-in-w js-item-w">
@@ -342,11 +355,11 @@
                         <div class="form-successful_sub-title MercuryDisplayRoman">We'll reach out to you shortly. <br />
                             Have a wonderful day!</div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
-</div> -->
+</div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
